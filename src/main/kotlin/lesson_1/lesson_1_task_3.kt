@@ -1,17 +1,17 @@
 package lesson_1
 
 fun main() {
-    val year: Int = 1961
-    var hour: Int = 9
-    var minute: Int = 7
+    val year = "1961"
+    var hour = "09"
+    var minute = "07"
 
     println(year)
-    print("%02d".format(hour))
-    print(":")
-    print("%02d".format(minute))
-    println()
+    println(hour)
+    println(minute)
 
-    hour = 10
-    minute = 55
-    println("$hour:$minute")
+    hour = "10"
+    minute = "55"
+    print(hour)
+    print(":")
+    print(minute)
 }
