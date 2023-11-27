@@ -2,7 +2,6 @@ package lesson_2
 
 import kotlin.math.pow
 
-const val ONE_HUNDRED_PERCENT = 100
 fun main() {
     val depositAmount = 70000
     val interestRate = 16.7
