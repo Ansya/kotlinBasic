@@ -5,10 +5,10 @@ fun main() {
     var moveWere = "E4"
     var chessMoveNumber = 1
 
-    println("$moveFrom, $moveWere, $chessMoveNumber")
+    println("$moveFrom-$moveWere;$chessMoveNumber")
 
     moveFrom = "D2"
     moveWere = "D3"
 
-    println("$moveFrom, $moveWere, ${++chessMoveNumber}")
+    println("$moveFrom-$moveWere;${++chessMoveNumber}")
 }
