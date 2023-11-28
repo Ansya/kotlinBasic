@@ -2,7 +2,7 @@ package lesson_3
 
 fun main() {
     val chessMoveFromServer = "D2-D4;1"
-    val chessMove = chessMoveFromServer.split("-", ";").toTypedArray()
+    val chessMove = chessMoveFromServer.split("-", ";")
 
     val moveFrom = chessMove[0]
     println(moveFrom)
