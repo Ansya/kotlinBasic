@@ -18,19 +18,15 @@ fun main() {
         "The ship can set sail: " +
             "${
                 (
-                    !isShipDamaged &&
-                        (
-                            numberOfCrewMembers >= NUMBER_OF_CREW_MEMBERS_MIN &&
-                                numberOfCrewMembers <= NUMBER_OF_CREW_MEMBERS_MAX
-                            ) &&
-                        (boxesProvisionNumber >= BOXES_PROVISIONS_NUMBER)
-                    ) ||
                     (
+                        !isShipDamaged &&
+                            (numberOfCrewMembers in NUMBER_OF_CREW_MEMBERS_MIN..NUMBER_OF_CREW_MEMBERS_MAX)
+                        ) || (
                         isShipDamaged &&
                             (numberOfCrewMembers == NUMBER_OF_CREW_MEMBERS_MAX) &&
-                            (boxesProvisionNumber >= BOXES_PROVISIONS_NUMBER) &&
                             isWeatherConditionsGood
                         )
+                    ) && (boxesProvisionNumber > BOXES_PROVISIONS_NUMBER)
             }"
     )
 }
