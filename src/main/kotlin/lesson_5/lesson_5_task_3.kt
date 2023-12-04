@@ -13,9 +13,8 @@ fun main() {
     if ((firstValue == FIRST_VALUE && secondValue == SECOND_VALUE) ||
         (firstValue == SECOND_VALUE && secondValue == FIRST_VALUE)) {
         println("Congratulations! You won the main prize!")
-    } else if (firstValue == FIRST_VALUE || secondValue == FIRST_VALUE) {
-        println("You won a consolation prize!")
-    } else if (firstValue == SECOND_VALUE || secondValue == SECOND_VALUE) {
+    } else if (firstValue == FIRST_VALUE || secondValue == FIRST_VALUE ||
+        firstValue == SECOND_VALUE || secondValue == SECOND_VALUE) {
         println("You won a consolation prize!")
     } else {
         println("Failure.")
