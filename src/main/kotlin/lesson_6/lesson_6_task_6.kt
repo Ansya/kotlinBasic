@@ -2,12 +2,8 @@ package lesson_6
 
 fun main() {
     println("Please enter number of seconds for timer:")
-    var secNumber = readln().toInt()
-    val endMessage = "\n$secNumber seconds have passed."
+    val secNumber = readln().toInt()
 
-    while (secNumber-- > 0) {
-        Thread.sleep(1000)
-        print(".")
-    }
-    println(endMessage)
+    Thread.sleep((1000 * secNumber).toLong())
+    println("\n$secNumber seconds have passed.")
 }
