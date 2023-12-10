@@ -1,7 +1,7 @@
 package lesson_8
 
 fun main() {
-    val arrayOfIngredients: Array<String> = arrayOf("Молоко", "Яйца", "Масло растительное", "Мука", "Сахар", "Соль")
+    val arrayOfIngredients = arrayOf("Молоко", "Яйца", "Масло растительное", "Мука", "Сахар", "Соль")
 
     println("Напишите ингредиент, который хотите найти:")
     val ingredientToFound = readln()
