@@ -3,7 +3,7 @@ package lesson_8
 import java.util.*
 
 fun main() {
-    val arrayOfIngredients: Array<String> = arrayOf("Молоко", "Яйца", "Масло растительное", "Мука", "Сахар", "Соль")
+    val arrayOfIngredients = arrayOf("Молоко", "Яйца", "Масло растительное", "Мука", "Сахар", "Соль")
     println("Список ингредиентов для Блинчиков: ${Arrays.toString(arrayOfIngredients)}")
 
     println("Напишите ингредиент, который хотите заменить:")
