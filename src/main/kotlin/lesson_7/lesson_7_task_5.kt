@@ -10,7 +10,7 @@ fun main() {
     if (passwordSize < PASSWORD_SIZE_MIN) passwordSize = PASSWORD_SIZE_MIN
 
     (0 until passwordSize).forEach {
-        password += rangeForPassword.random().toString()
+        password += rangeForPassword.random()
     }
     println("Generated password: $password")
 }
