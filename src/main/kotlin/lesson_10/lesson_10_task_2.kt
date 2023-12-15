@@ -7,7 +7,7 @@ fun main() {
     println("Please, create your password:")
     val userPass = readln()
 
-    if (isValueHasEnoughLength(userLogin) || isValueHasEnoughLength(userPass)) {
+    if (isValueHasEnoughLength(userLogin) && isValueHasEnoughLength(userPass)) {
         println("Great, you are register now.")
     } else {
         println("Password or login has not enough length.")
