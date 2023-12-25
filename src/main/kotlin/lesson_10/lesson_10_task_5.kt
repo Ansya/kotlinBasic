@@ -21,12 +21,12 @@ fun main() {
 fun authoriseTheUser(login: String, password: String): String? {
     var token: String? = null
     if (login == USER_NAME && password == USER_PASSWORD) {
-        token = tokenGenerator()
+        token = generateToken()
     }
     return token
 }
 
-fun tokenGenerator(): String {
+fun generateToken(): String {
     var token = ""
     val rangeOfToken = ('a'..'z') + ('A'..'Z') + ('0'..'9')
     for (i in 0 until TOKEN_SIZE) {
