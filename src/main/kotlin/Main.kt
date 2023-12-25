@@ -1,7 +1,29 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun isLetterOrUnderscore(c :Char) = c in '1'..'9' || c in 'a'..'z' || c in 'A'..'Z' || c in '_'..'_'
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun isValidIdentifier(s: String): Boolean {
+    var isValidIdentifier = s.isNotEmpty()
+    for (c in s) {
+        if (!isLetterOrUnderscore(c)) isValidIdentifier = false
+    }
+    return isValidIdentifier
+}
+
+fun List<Int>.sum(): Int {
+    var result = 0
+    for (i in this) {
+        result += i
+    }
+    return result
+}
+
+fun main() {
+    println(isValidIdentifier("name"))   // true
+    println(isValidIdentifier("_name"))  // true
+    println(isValidIdentifier("_12"))    // true
+    println(isValidIdentifier(""))       // false
+    println(isValidIdentifier("012"))    // false
+    println(isValidIdentifier("no$"))    // false
+
+    val sum = listOf(1, 2, 5).sum()
+    println(sum)    // 6
 }

@@ -15,11 +15,6 @@ fun main() {
     println("Количества выигрышных партий человека: $numberOfHumanWins")
 }
 
-fun rollDice(): Int {
-    val valueRange = 1..6
-    return valueRange.random()
-}
-
 fun playOneRound(): Boolean {
     var isHumanWin = false
     val computerDiceRoll = rollDice()
