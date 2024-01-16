@@ -1,29 +1,33 @@
 package lesson_11
 
-import java.util.UUID
+import java.util.*
 
 class ForumMember(
     val userName: String,
     val userId: UUID = UUID.randomUUID(),
 )
+
 class ForumMessage(
     val authorId: UUID,
     val message: String,
 )
-class Forum() {
+
+class Forum {
     val messages: MutableList<ForumMessage> = mutableListOf()
     val authors: MutableList<ForumMember> = mutableListOf()
-    fun createNewUser(userName: String) :ForumMember {
+    fun createNewUser(userName: String): ForumMember {
         val member = ForumMember(userName = userName)
         authors.add(member)
         return member
     }
-    fun createNewMessage(authorId :UUID, message :String) {
-        if (authors.any{ it.userId == authorId}) {
+
+    fun createNewMessage(authorId: UUID, message: String) {
+        if (authors.any { it.userId == authorId }) {
             val forumMessage = ForumMessage(authorId, message)
             messages.add(forumMessage)
         }
     }
+
     fun printThread() {
         println("Сообщения форума:")
         for (message in messages) {
