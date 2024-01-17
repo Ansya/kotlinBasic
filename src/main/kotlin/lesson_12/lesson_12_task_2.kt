@@ -1,14 +1,14 @@
 package lesson_12
 
 class Weather1(
-    var daytimeTemperature: Int,
-    var eveningTemperature: Int,
-    var precipitation: Boolean,
+    val daytimeTemperature: Int,
+    val eveningTemperature: Int,
+    val isPrecipitation: Boolean,
 ) {
     fun printWeather() {
         println("Дневная температура: $daytimeTemperature")
         println("Вечерняя температура: $eveningTemperature")
-        println("Наличие осадков: $precipitation")
+        println("Наличие осадков: $isPrecipitation")
     }
 }
 
