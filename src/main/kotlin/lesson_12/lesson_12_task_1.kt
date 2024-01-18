@@ -1,6 +1,6 @@
 package lesson_12
 
-class Weather() {
+class Weather {
     var daytimeTemperature: Int = 0
     var eveningTemperature: Int = 0
     var isPrecipitation: Boolean = false
