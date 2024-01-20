@@ -2,7 +2,7 @@ package lesson_12
 
 const val KELVIN_COEFFICIENT = 273.15
 
-class Weather2(
+class Weather3(
     _daytimeTemperature: Int,
     _eveningTemperature: Int,
     _isPrecipitation: Boolean,
@@ -19,5 +19,5 @@ class Weather2(
 }
 
 fun main() {
-    val dayWeather = Weather2(265, 260, true)
+    val dayWeather = Weather3(265, 260, true)
 }

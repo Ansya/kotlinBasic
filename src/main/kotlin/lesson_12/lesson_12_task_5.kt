@@ -4,7 +4,7 @@ import kotlin.random.Random
 
 const val KELVIN_COEFFICIENT2 = 273.15
 
-class Weather3(
+class Weather4(
     _daytimeTemperature: Int,
     _eveningTemperature: Int,
     _isPrecipitation: Boolean,
@@ -22,10 +22,10 @@ class Weather3(
 
 fun main() {
     val temperatureRange = 248..275
-    val weatherForMonth = mutableListOf<Weather3>()
+    val weatherForMonth = mutableListOf<Weather4>()
     for (i in 0..30) {
         weatherForMonth.add(
-            Weather3(temperatureRange.random(),
+            Weather4(temperatureRange.random(),
                      temperatureRange.random() - 5,
                      Random.nextBoolean())
         )
