@@ -20,6 +20,6 @@ fun main() {
         Contact2("Анна", 89873265345, "Netcracker Ltd."),
         )
 
-    val companiesList = contactsList.filter{ it.company != null }.map { it.company }
+    val companiesList = contactsList.mapNotNull { it.company }
     println("Список всех компаний: $companiesList")
 }
