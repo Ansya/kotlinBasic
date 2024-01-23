@@ -1,6 +1,6 @@
 package lesson_13
 
-class Contact(
+class Contact1(
     val name :String,
     val phoneNumber :Long,
     val company :String? = null,
@@ -12,8 +12,8 @@ class Contact(
 }
 
 fun main() {
-    val contact1 = Contact("Настя", 89084756632)
+    val contact1 = Contact1("Настя", 89084756632)
     contact1.printContact()
-    val contact2 = Contact("Сергей", 89048976546, "ВГУВТ")
+    val contact2 = Contact1("Сергей", 89048976546, "ВГУВТ")
     contact2.printContact()
 }
