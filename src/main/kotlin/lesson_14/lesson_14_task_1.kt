@@ -1,38 +1,30 @@
 package lesson_14
 
-open class Liner(
+open class Cargo(
     val name :String,
-    val speed :Int = 25,
-    val crewMembersCapacity :Int = 40,
-    val passengerCapacity :Int = 0,
-) {
-    fun numberOfCrewMembers() {
-        println("$name: число членов команды $crewMembersCapacity")
-    }
-    fun maxSpeed() {
-        println("$name: cаксимальная скорость $speed")
-    }
-    fun numberOfPassengeres() {
-        println("$name: пассажировместиомость $passengerCapacity")
-    }
-}
+    val speed :Int = 15,
+    val crewMembersCapacity :Int = 20,
+    val carryingCapacity :Int = 2500,
+)
 
-class Cargo(
+class Liner(
     name :String,
-    speed :Int = 15,
-    val carryingCapacity :Int = 30,
-    crewMembersCapacity :Int = 20,
-) : Liner(name, speed, crewMembersCapacity)
+    speed :Int = 25,
+    crewMembersCapacity :Int = 50,
+    carryingCapacity :Int = 500,
+    val passengerCapacity :Int = 200,
+) : Cargo(name, speed, crewMembersCapacity, carryingCapacity)
 
 class Icebreaker(
     name :String,
     speed :Int = 10,
-    val canBreakIce :Boolean = true,
     crewMembersCapacity :Int = 10,
-) : Liner(name, speed, crewMembersCapacity)
+    carryingCapacity :Int = 30,
+    val isBreakIce :Boolean = true,
+) : Cargo(name, speed, crewMembersCapacity, carryingCapacity)
 
 fun main() {
-    val liner1 = Liner("Константин Коротков", 26, 55, 245)
-    val cargo1 = Cargo("Волгодон", 15, 2050, 25)
-    val icebreaker1 = Icebreaker("Ямал", 10, true)
+    val liner1 = Liner("Константин Коротков", 26)
+    val cargo1 = Cargo("Волгодон", 15)
+    val icebreaker1 = Icebreaker("Ямал", 10)
 }
