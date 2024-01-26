@@ -6,17 +6,13 @@ import kotlin.math.PI
 abstract class Figure(
     val color: Color,
 ) {
-    open fun calculateArea() :Int {
-        return 0
-    }
-    open fun calculatePerimeter() :Int {
-        return 0
-    }
+    abstract fun calculateArea(): Int
+    abstract fun calculatePerimeter(): Int
 }
 
 class Circle(
     color: Color,
-    val radius :Int,
+    val radius: Int,
 ) : Figure(color) {
     override fun calculateArea(): Int {
         return (PI * radius * radius).toInt()
@@ -29,8 +25,8 @@ class Circle(
 
 class Rectangle(
     color: Color,
-    val height :Int,
-    val width :Int,
+    val height: Int,
+    val width: Int,
 ) : Figure(color) {
     override fun calculateArea(): Int {
         return height * width
