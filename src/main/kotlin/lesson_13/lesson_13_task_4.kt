@@ -1,9 +1,9 @@
 package lesson_13
 
 class Contact3(
-val name :String,
-val phoneNumber :Long,
-val company :String? = null,
+    val name: String,
+    val phoneNumber: Long,
+    val company: String? = null,
 ) {
     fun printContact() {
         println("Контакт:")
@@ -35,5 +35,5 @@ fun main() {
     } while (isWantToCreateContact)
 
     println("Список контактов:")
-    contactsList.forEach{ it.printContact() }
+    contactsList.forEach { it.printContact() }
 }
