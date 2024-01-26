@@ -1,10 +1,10 @@
 package lesson_14
 
 open class Cargo1(
-    val name :String,
-    val speed :Int = 15,
-    val crewMembersCapacity :Int = 20,
-    val carryingCapacity :Int = 2500,
+    val name: String,
+    val speed: Int = 15,
+    val crewMembersCapacity: Int = 20,
+    val carryingCapacity: Int = 2500,
 ) {
     open fun printShipProperties() {
         println("--------------------------")
@@ -20,11 +20,11 @@ open class Cargo1(
 }
 
 class Liner1(
-    name :String,
-    speed :Int = 25,
-    crewMembersCapacity :Int = 50,
-    carryingCapacity :Int = 500,
-    val passengerCapacity :Int = 200,
+    name: String,
+    speed: Int = 25,
+    crewMembersCapacity: Int = 50,
+    carryingCapacity: Int = 500,
+    val passengerCapacity: Int = 200,
 ) : Cargo1(name, speed, crewMembersCapacity, carryingCapacity) {
 
     override fun printShipProperties() {
@@ -38,11 +38,11 @@ class Liner1(
 }
 
 class Icebreaker1(
-    name :String,
-    speed :Int = 10,
-    crewMembersCapacity :Int = 10,
-    carryingCapacity :Int = 30,
-    val isBreakIce :Boolean = true,
+    name: String,
+    speed: Int = 10,
+    crewMembersCapacity: Int = 10,
+    carryingCapacity: Int = 30,
+    val isBreakIce: Boolean = true,
 ) : Cargo1(name, speed, crewMembersCapacity, carryingCapacity) {
 
     override fun printShipProperties() {
