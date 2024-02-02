@@ -20,9 +20,9 @@ class Planet(
 ) : Globe(name, isWithAtmosphere, isSuitableForLand)
 
 fun main() {
-    val satellite1 = Satellite("Деймос", false, false)
-    val satellite2 = Satellite("Фобос", false, false)
-    val planet = Planet("Марс", true, true, listOf(satellite1, satellite2))
+    val satellite1 = Satellite("Деймос", isWithAtmosphere = false, isSuitableForLand = false)
+    val satellite2 = Satellite("Фобос", isWithAtmosphere = false, isSuitableForLand = false)
+    val planet = Planet("Марс", isWithAtmosphere = true, isSuitableForLand = true, listOf(satellite1, satellite2))
 
     println("Планета ${planet.name} имеет следующие спутники:")
     planet.satellites.forEach {
