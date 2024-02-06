@@ -7,9 +7,9 @@ interface Seeker {
 }
 
 abstract class Product() {
-    abstract val id :UUID
-    abstract val name :String
-    abstract val amount :Int
+    abstract val id: UUID
+    abstract val name: String
+    abstract val amount: Int
 }
 
 class MusicalTool(
