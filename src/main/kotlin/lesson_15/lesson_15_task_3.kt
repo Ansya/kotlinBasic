@@ -1,10 +1,10 @@
 package lesson_15
 
-import java.util.UUID
+import java.util.*
 
 abstract class Member {
-    abstract val id :UUID
-    abstract val name :String
+    abstract val id: UUID
+    abstract val name: String
     abstract fun readMessage()
     abstract fun writeMessage()
 }
@@ -12,10 +12,11 @@ abstract class Member {
 class ForumUser(
     override val id: UUID = UUID.randomUUID(),
     override val name: String,
-) :Member() {
+) : Member() {
     override fun readMessage() {
         println("Пользователь $name прочел сообщения форума.")
     }
+
     override fun writeMessage() {
         println("Пользователь $name написал сообщение в форум.")
     }
@@ -24,16 +25,19 @@ class ForumUser(
 class ForumAdmin(
     override val id: UUID = UUID.randomUUID(),
     override val name: String,
-) :Member() {
+) : Member() {
     override fun readMessage() {
         println("Администратор $name прочел сообщения форума.")
     }
+
     override fun writeMessage() {
         println("Администратор $name написал сообщение в форум.")
     }
+
     fun removeUser() {
         println("Администратор $name удалил пользователя.")
     }
+
     fun removeMessage() {
         println("Администратор $name удалил сообщение.")
     }
