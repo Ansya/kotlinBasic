@@ -1,12 +1,14 @@
 package lesson_16
 
+import kotlin.math.pow
+
 private const val PI_VALUE = 3.14
 
 class Circle(radius: Double) {
     private var circleRadius: Double = radius
 
     fun calculateArea(): Double {
-        return PI_VALUE * (circleRadius * circleRadius)
+        return PI_VALUE * circleRadius.pow(circleRadius)
     }
 
     fun calculatePerimeter(): Double {
