@@ -1,13 +1,13 @@
 package lesson_17
 
-class QuizElement (
-    question :String,
-    answer :String = "",
+class QuizElement(
+    question: String,
+    answer: String = "",
 ) {
-    val question :String = question
+    val question: String = question
         get() = field
 
-    var answer :String = answer
+    var answer: String = answer
         get() = field
         set(value) {
             field = value
