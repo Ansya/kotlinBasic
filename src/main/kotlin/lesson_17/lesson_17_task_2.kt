@@ -2,8 +2,8 @@ package lesson_17
 
 class Ship(
     name: String,
-    var averageSpeed: Int,
-    var port: String,
+    val averageSpeed: Int,
+    val port: String,
 ) {
     var name = name
         set(value) {
