@@ -2,7 +2,7 @@ package lesson_17
 
 class Package(
     val trackingNumber: Int,
-    location :String,
+    location: String,
 ) {
     var moveCount = 1
     var location = location
