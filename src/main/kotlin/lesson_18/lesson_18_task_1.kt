@@ -1,7 +1,7 @@
 package lesson_18
 
 class Order(
-    var orderNumber: Int,
+    val orderNumber: Int,
 ) {
     fun makeOrder(product: String) {
         println("Заказан товар: $product")
