@@ -1,11 +1,11 @@
 package lesson_18
 
-open class Die {
-    protected open val numberOfSides = 0
-    open fun rollTheDie() = ""
+abstract class Dice {
+    abstract val numberOfSides :Int
+    abstract fun rollTheDie(): String
 }
 
-class FourSidesDie : Die() {
+class FourSidesDie : Dice() {
     override val numberOfSides = 4
 
     override fun rollTheDie(): String {
@@ -14,7 +14,7 @@ class FourSidesDie : Die() {
     }
 }
 
-class SixSidesDie : Die() {
+class SixSidesDie : Dice() {
     override val numberOfSides = 6
 
     override fun rollTheDie(): String {
@@ -23,7 +23,7 @@ class SixSidesDie : Die() {
     }
 }
 
-class EightSidesDie : Die() {
+class EightSidesDie : Dice() {
     override val numberOfSides = 8
 
     override fun rollTheDie(): String {
@@ -33,11 +33,11 @@ class EightSidesDie : Die() {
 }
 
 fun main() {
-    val dies :List<Die> = listOf(FourSidesDie(), SixSidesDie(), EightSidesDie())
+    val dies :List<Dice> = listOf(FourSidesDie(), SixSidesDie(), EightSidesDie())
     showAllDieRolls(dies)
 }
 
-fun showAllDieRolls(dies :List<Die>) {
+fun showAllDieRolls(dies :List<Dice>) {
     dies.forEach {
         println(it.rollTheDie())
     }
