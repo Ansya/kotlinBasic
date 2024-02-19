@@ -1,9 +1,9 @@
 package lesson_18
 
-open class Pet(
+abstract class Pet(
     val name: String,
 ) {
-    protected open val food = ""
+    abstract val food: String
     fun play() = "[$name] - [играет]"
     fun sleep() = "[$name] - [спит]"
     fun eat() = "[$name] - [кушает $food]"
