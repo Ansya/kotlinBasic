@@ -1,28 +1,19 @@
 package lesson_19
 
 enum class PatronType(val strikeForce :Int) {
-    BLUE(5) {
-        override fun getTypeName(): String {
-            return "синий"
-        }
-    },
-    GREEN(10) {
-        override fun getTypeName(): String {
-            return "зеленый"
-        }
-    },
-    RED(20) {
-        override fun getTypeName(): String {
-            return "красный"
-        }
-    },
-    NONE(0) {
-        override fun getTypeName(): String {
-            return "<не заряжен>"
-        }
-    };
+    BLUE(5),
+    GREEN(10),
+    RED(20),
+    NONE(0);
 
-    abstract fun getTypeName() : String
+    fun getTypeName() : String {
+        return when (strikeForce) {
+            5 -> "синий"
+            10 -> "зеленый"
+            20 -> "красный"
+            else -> "<не заряжен>"
+        }
+    }
 }
 
 class Tank(
@@ -31,7 +22,7 @@ class Tank(
 ) {
     fun armPatron(newPatron: PatronType) {
         patron = newPatron
-        println("Танк \'$name\' вооружился патроном типа \'$patron\'.")
+        println("Танк \'$name\' вооружился патроном типа \'${patron.getTypeName()}\'.")
     }
 
     fun shoot() {
