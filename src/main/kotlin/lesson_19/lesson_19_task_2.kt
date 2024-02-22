@@ -1,23 +1,9 @@
 package lesson_19
 
-enum class Category {
-    CLOTHES {
-        override fun getCategoryDescription(): String {
-            return "одежда"
-        }
-    },
-    STATIONERY {
-        override fun getCategoryDescription(): String {
-            return "канцелярские товары"
-        }
-    },
-    OTHER {
-        override fun getCategoryDescription(): String {
-            return "разное"
-        }
-    };
-
-    abstract fun getCategoryDescription(): String
+enum class Category(val description : String) {
+    CLOTHES("одежда"),
+    STATIONERY("канцелярские товары"),
+    OTHER("разное"),
 }
 
 class Good(
@@ -26,7 +12,7 @@ class Good(
     val category: Category,
 ) {
     fun getInfo() :String {
-        return "Товар №$id - \'$name\', категория: \'${category.getCategoryDescription()}\'"
+        return "Товар №$id - \'$name\', категория: \'${category.description}\'"
     }
 }
 
