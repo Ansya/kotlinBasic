@@ -2,12 +2,12 @@ package lesson_20
 
 fun main() {
     val elementList = listOf("круг", "квадрат", "шестиугольник", "ромб")
-    val pressElement: (String) -> Unit = {
-        println("Нажат элемент \'$it\'")
-    }
+    val pressElement: () -> String = { "Нажат элемент" }
 
-    val elementsMap = elementList.map { it to pressElement(it) }
-    elementsMap.forEach{
-        it.second
+    val elementsMap = elementList.map { it to pressElement() }
+    elementsMap.forEachIndexed { i, pair ->
+        if (((i + 1) % 2) == 0) {
+            println("${pair.second} ${pair.first}")
+        }
     }
 }
