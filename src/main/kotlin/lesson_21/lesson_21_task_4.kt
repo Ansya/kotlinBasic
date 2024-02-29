@@ -11,8 +11,8 @@ data class Word(
 )
 
 fun File.saveWordToFile(word: Word) {
-    val line = "${word.original}|${word.translate}|${word.correctAnswersCount}"
-    this.appendText(line.lowercase())
+    this.writeText("${word.original}|${word.translate}|" +
+            "${word.correctAnswersCount}\n" + this.readText())
 }
 
 fun main() {
